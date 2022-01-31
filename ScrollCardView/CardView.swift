@@ -8,28 +8,35 @@
 import SwiftUI
 
 struct CardView: View {
+    var imageName: String
+    var authorName : String
+    var courseTitle : String
+    var originalPrice : String
+    var discountPrice : String
+    
     var body: some View {
         VStack (alignment: .leading){
-            Image("yoshi")
+            Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(width: 300, height: 300, alignment: .center)
             HStack{
                 VStack(alignment: .leading){
-                    Text("Yoshi Game")
+                    Text(authorName)
                         .font(.headline)
                         .foregroundColor(.secondary)
                     
-                    Text("Yoshi's Game for Nintendo 64".uppercased())
+                    Text(courseTitle.uppercased())
                         .font(.title)
                         .foregroundColor(.primary)
                         .fontWeight(.bold)
                         .lineLimit(2)
                     HStack{
-                        Text("10.99 $")
+                        Text(originalPrice)
                             .font(.subheadline)
                             .foregroundColor(.primary)
                         
-                        Text("109.99 $")
+                        Text(discountPrice)
                             .font(.caption)
                             .foregroundColor(.secondary)
                             .strikethrough()
@@ -51,6 +58,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView(imageName: "yoshi", authorName: "Alonzo Choque", courseTitle: "Yoshi History", originalPrice: "199.99 $", discountPrice: "10.99 $")
     }
 }

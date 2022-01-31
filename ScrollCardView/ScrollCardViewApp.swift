@@ -11,8 +11,8 @@ import SwiftUI
 struct ScrollCardViewApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            CardView()
+            ContentView()
+//            CardView(imageName: "yoshi", authorName: "Alonzo Choque", courseTitle: "Yoshi History", originalPrice: "199.99 $", discountPrice: "10.99 $")
             
         }
     }
