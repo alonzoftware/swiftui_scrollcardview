@@ -15,7 +15,7 @@ struct CardView: View {
     var discountPrice : String
     
     var body: some View {
-        VStack (alignment: .leading){
+        VStack (alignment: .center){
             Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
